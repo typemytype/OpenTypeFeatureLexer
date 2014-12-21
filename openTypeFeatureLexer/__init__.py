@@ -37,7 +37,7 @@ class OpenTypeFeatureLexer(RegexLexer):
                 include('keywords'),
                 include('numbers'),
                 include('whitespace'),
-                (r'[a-zA-Z_][a-zA-Z0-9_]*', Name),
+                (r'[a-zA-Z_][a-zA-Z0-9_.]*', Name),
             ],
             'keywords': [
                         (r'(%s)\b' % ("|".join(_featureKwlist)), Keyword),
